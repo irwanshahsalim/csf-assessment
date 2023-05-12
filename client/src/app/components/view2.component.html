@@ -1,0 +1,7 @@
+<div *ngIf="upload">
+    <h2>{{ upload.title }}</h2>
+    <p>Uploaded by: {{ upload.name }} on {{ upload.date | date }}</p>
+    <p>Comments: {{ upload.comments }}</p>
+    <img [src]="upload.imageUrl" alt="{{ upload.title }}">
+  </div>
+  

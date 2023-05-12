@@ -1,0 +1,9 @@
+<!-- view0.component.html -->
+
+<div *ngFor="let bundle of bundles">
+    <h2>{{ Photo Storage }}</h2>
+    <button routerLink="/view1">Upload</button>
+    <p>{{ bundle.date | date }}</p>
+    <a routerLink="/view2/{{ bundle.id }}">View</a>
+  </div>
+  

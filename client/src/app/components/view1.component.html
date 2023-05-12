@@ -1,0 +1,28 @@
+<form class="form" [formGroup]="searchForm" (submit)="onSubmit()">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" id="name" formControlName="name" required>
+  </div>
+
+  <div class="form-group">
+    <label for="title">Title:</label>
+    <input type="text" id="title" formControlName="title" required>
+  </div>
+
+  <div class="form-group">
+    <label for="comments">Comments:</label>
+    <textarea id="comments" formControlName="comments"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="archive">Archive:</label>
+    <input type="file" id="archive" (change)="onFileSelected($event)" accept=".zip" required>
+  </div>
+
+  <div class="form-group">
+    <div class="button-group">
+      <button type="button" (click)="onCancel()">Cancel</button>
+      <button type="submit"  class="search-button">Submit</button>
+    </div>
+  </div>
+</form>
